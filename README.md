@@ -1,2 +1,1 @@
-# minetest-player-finder
-Minetest Player Finder
+# Luanti Player Finder
