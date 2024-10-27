@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Imperium Server</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Minetest Player Searcher</h1>
+        <h3>No. of players online: <txt id="Playercount"> Loading...</txt> </h3>
+        <h3>No. of servers online: <txt id="Servercount"> Loading...</txt> </h3>
+        <h4>Highest: <txt id="highest"> Loading...</txt> </h4>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-box" placeholder="Search all servers for player...   Use '[server] server name' to search servers.">
+            <button id="search-button" class="search-button lightgreen">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="text-container">
+            <div id="results">Seach someone!</div>
+        </section>
+    </main>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Xeno333. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        update_banner();
+        setInterval(update_banner, 5000);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get references to the search input and button
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+
+            // Add an event listener to the button
+            searchButton.addEventListener("click", function() {
+                // Get the value of the search input
+                const query = searchInput.value.trim();
+
+                // Check if the search input is not empty
+                if (query) {
+                    find_player(query)
+                }
+                else {
+                    document.getElementById('results').innerHTML = "Seach someone!";
+                }
+            });
+
+            // Optionally, handle "Enter" key press on the input field
+            searchInput.addEventListener("keyup", function(event) {
+                    searchButton.click();
+            });
+        });
+    </script>
+
+</body>
+</html>
