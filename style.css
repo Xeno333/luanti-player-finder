@@ -81,29 +81,6 @@ footer {
 footer p {
     margin: 5px 0;
 }
-/* Navigation Bar */
-nav {
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #c7f9cc;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
 
 
 /* Basic styling for the search bar */
@@ -114,6 +91,7 @@ nav ul li a {
     max-width: 100%;
     padding: 20px;
     text-align: center;
+    gap: 1rem;
 }
 .search-box {
     border-color: lightblue;
@@ -140,27 +118,6 @@ seachinfobad {
     color: lightcoral;
 }
 
-
-
-/* Responsive Image */
-.responsive-image {
-    max-width: 70%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Figure and Figcaption */
-.image-container {
-    text-align: center; /* Centers the image and caption */
-    margin: 0 auto; /* Centers the container */
-}
-
-figcaption {
-    font-size: 1.5rem; /* Slightly smaller text size for the caption */
-    color: white; /* Light color for the caption text */
-    margin-top: 10px; /* Space between image and caption */
-}
 
 
 /* Button & Hover Effects */
